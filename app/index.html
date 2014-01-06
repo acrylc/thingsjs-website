@@ -1,0 +1,252 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ThingsJS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="scripts/highlighter/prettify.css">
+
+        <!-- endbuild -->
+    </head>
+  <style>
+ 
+svg {
+  font: 10px sans-serif;
+  color: rgb(170,170,170);
+}
+ 
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 4.5px;
+}
+ 
+.axis path,
+.axis line {
+  fill: none;
+  stroke: rgb(170,170,170);
+  shape-rendering: crispEdges;
+    color: rgb(170,170,170);
+
+}
+ 
+</style>
+  
+<body>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <section id='main'>
+        <div id='title'>
+            <h1>THINGS.JS</h1>
+            <!-- A toolkit of webcomponents for arduino connected sensors and acctuators -->
+            <h2>Extend your web application into the physical world</h2>
+            <input type='button' value='CODE'>
+            <input type='button' value='EXAMPLES'>
+        </div>
+    </section>
+
+    <section id='about'>
+        <p id='summary'>ThingsJS allows you to abtract your arduino as web components to include in your HTML. You can then use your favorite javascript libraries to manipulate, visualize and control data from and to your arduino.
+        </p>
+    </section>
+
+        <section id='examples'>
+
+            <div id='blocks'>
+                <div id='example-title'>
+                <h1>Prototype your hardware with HTML</h1>
+                <h3>Turn ON/OFF an LED on button click</h3>
+                </div>
+                <div class='code block'>
+                    <div class='code-inner'>
+                        <pre class="prettyprint">
+                
+    // Testing the button and LED implementations 
+    // Turn ON/OFF LED with button click
+    var button = $('#button')[0];
+    var pressure = $('#pressure')[0];
+    var led = $('#led')[0];
+
+    button.onClick = function(){
+        if (led.isOn()){
+            led.turnOff();
+        } else {
+            led.turnOn();
+        }
+    }
+    pressure.onPress = function(){
+        if (led.isOn()){
+            led.turnOff();
+        } else {
+            led.turnOn();
+        }
+    }
+                        </pre>
+                    </div>
+                </div>
+
+                 <div class='screen block'>
+                </div>
+
+                 <div class='physical block'>
+                </div>
+                <div id='description'>PLAY</div>
+            </div>
+
+            <div id='description'>
+
+            </div>
+
+        </section> 
+
+        <section id='examples'>
+
+            <div id='blocks'>
+                <div id='example-title'>
+                <h1>Publish your data on the Web</h1>
+                <h3>Graphing real time temperature data in Pittsburgh</h3>
+                </div>
+                <div class='code block'>
+                    <div class='code-inner'>
+                        <pre class="prettyprint">
+                
+    // Testing the button and LED implementations 
+    // Turn ON/OFF LED with button click
+    var button = $('#button')[0];
+    var pressure = $('#pressure')[0];
+    var led = $('#led')[0];
+
+    button.onClick = function(){
+        if (led.isOn()){
+            led.turnOff();
+        } else {
+            led.turnOn();
+        }
+    }
+    pressure.onPress = function(){
+        if (led.isOn()){
+            led.turnOff();
+        } else {
+            led.turnOn();
+        }
+    }
+                        </pre>
+                    </div>
+                </div>
+
+                 <div class='graph block'>
+                </div>
+
+                <div id='description'>PLAY</div>
+            </div>
+
+            <div id='description'>
+
+            </div>
+
+        </section>
+
+         <section id='examples'>
+
+            <div id='blocks'>
+                <div id='example-title'>
+                <h1>Extend your UI past the screen</h1>
+                <h3>Turn ON/OFF an LED on button click</h3>
+                </div>
+                <div class='code block'>
+                    <div class='code-inner'>
+                        <pre class="prettyprint">
+                
+    // Testing the button and LED implementations 
+    // Turn ON/OFF LED with button click
+    var button = $('#button')[0];
+    var pressure = $('#pressure')[0];
+    var led = $('#led')[0];
+
+    button.onClick = function(){
+        if (led.isOn()){
+            led.turnOff();
+        } else {
+            led.turnOn();
+        }
+    }
+    pressure.onPress = function(){
+        if (led.isOn()){
+            led.turnOff();
+        } else {
+            led.turnOn();
+        }
+    }
+                        </pre>
+                    </div>
+                </div>
+
+                 <div class='screen block'>
+                </div>
+
+                 <div class='physical block'>
+                </div>
+                <div id='description'>PLAY</div>
+            </div>
+
+            <div id='description'>
+
+            </div>
+
+        </section>
+
+
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <script src="scripts/highlighter/prettify.js"></script>
+        <script>prettyPrint();</script>
+
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/sass-bootstrap/js/bootstrap-affix.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-alert.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-dropdown.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-tooltip.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-modal.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-transition.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-button.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-popover.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-typeahead.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-carousel.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-scrollspy.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
+        <script src="bower_components/sass-bootstrap/js/bootstrap-tab.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
